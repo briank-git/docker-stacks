@@ -23,6 +23,9 @@ USER ${NB_UID}
 
 WORKDIR "${HOME}"
 
+# remove the "work/" directory added in an earlier layer...
+RUN rm -rf work
+
 COPY conda-linux-64.lock /tmp/conda-linux-64.lock
 
 RUN mamba update --quiet --file /tmp/conda-linux-64.lock && \
