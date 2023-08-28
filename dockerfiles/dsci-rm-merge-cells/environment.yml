@@ -20,11 +20,11 @@ dependencies:
   - jupyterlab-git
   - jupyterlab_code_formatter
   - jupytext
-  - matplotlib=3.3.2
+  - matplotlib
   - nbgitpuller
   - openpyxl=3.0.7
-  - panel=0.11.3
-  - pytest=6.2.4
+  - panel
+  - pytest
   - python-graphviz=0.16
   - r-base 
   - r-caret 
@@ -54,8 +54,8 @@ dependencies:
   - r-testthat 
   - r-tidymodels 
   - r-tidyverse 
-  - scikit-learn=0.24.2
+  - scikit-learn
   - unixodbc
   - vega_datasets=0.9.0
-  - xgboost=1.4.0
+  - xgboost
   - xlrd=2.0.1
