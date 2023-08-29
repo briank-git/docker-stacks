@@ -33,6 +33,11 @@ RUN mamba update --quiet --file /tmp/conda-linux-64.lock && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
+COPY requirements.txt /tmp/requirements.txt
+
+RUN echo "Installing python packages using pip from requirements.txt..." && \
+    pip install --no-cache-dir -r /tmp/requirements.txt
+
 # Disable the cell toolbar (which ignores metadata and students often accidentally click + delete grading cells)
 RUN jupyter labextension disable @jupyterlab/cell-toolbar-extension
 

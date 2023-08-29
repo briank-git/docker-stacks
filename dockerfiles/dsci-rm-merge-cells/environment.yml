@@ -23,6 +23,7 @@ dependencies:
   - matplotlib
   - nbgitpuller
   - openpyxl=3.0.7
+  - pandas=1.5.3
   - panel
   - pytest
   - python-graphviz=0.16
