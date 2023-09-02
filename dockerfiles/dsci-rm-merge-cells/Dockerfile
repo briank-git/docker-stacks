@@ -21,10 +21,7 @@ RUN apt-get update --yes && \
 
 USER ${NB_UID}
 
-WORKDIR "${HOME}"
-
-# remove the "work/" directory added in an earlier layer...
-RUN rm -rf work
+WORKDIR "${HOME}/work"
 
 # disable warnings that pollute build logs; seems to be related to the update to python 3.11
 # https://discourse.jupyter.org/t/debugger-warning-it-seems-that-frozen-modules-are-being-used-python-3-11-0/16544/12
