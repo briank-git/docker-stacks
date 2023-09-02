@@ -21,6 +21,7 @@ RUN apt-get update --yes && \
 
 USER ${NB_UID}
 
+# Change workdir to $HOME/work so config files are preserved when bind mounting
 WORKDIR "${HOME}/work"
 
 # disable warnings that pollute build logs; seems to be related to the update to python 3.11
